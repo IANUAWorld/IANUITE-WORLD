@@ -1,0 +1,18 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/wp-admin/:path*", "destination": "/", "statusCode": 301 },
+    { "source": "/wp-login.php", "destination": "/", "statusCode": 301 }
+  ],
+  "cleanUrls": true
+}
